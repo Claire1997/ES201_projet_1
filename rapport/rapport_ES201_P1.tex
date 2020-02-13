@@ -1,0 +1,156 @@
+\documentclass[a4paper]{article}
+\usepackage[usestackEOL]{stackengine}
+\usepackage[12pt]{extsizes}
+\usepackage{geometry}
+\usepackage{pdfpages}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathabx}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{subfigure}
+\usepackage{listings}
+
+
+\setlength{\parindent}{0pt}
+
+\title{\textbf{Rapport TP4 ES201 : \\ Architecture des microprocesseurs} \vspace{0.7cm}}
+\date{24/02/2020}
+\author{Alessandro LEONARDI, Corentin SOUBEIRAN,  \\ Iliana VINCENTI, Ruonan QIAN}
+\theoremstyle{plain}
+
+\begin{document}
+   
+    \begin{figure}
+		\centering
+		\includegraphics[width=0.5\linewidth]{logo_ENSTA}
+	\end{figure} 
+   
+	\maketitle
+	
+	\thispagestyle{empty}
+	\newpage
+	\setcounter{page}{1}
+	\tableofcontents
+	\newpage
+
+
+	\section{Présentation du TP}
+	
+    \newpage
+	\section{Profiling de l’application}
+		Nous pouvons compiler en utilisant la commande : \textit{sslittle-na-sstrix-gcc <source>.c -o <exe>.ss} pour produire un binaire pour le simulateur SimpleScalar.
+		\subsection{Q1}
+			Nous allons generer le pourcentage de chaque classe d'instructions de ces applications en utilisant la commande : \textit{sim-profile -iclass <exe>.ss <input>}.
+
+			\begin{table}[!htbp]
+			\centering
+			\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{dijkstra\_small.ss input.dat}\\
+			\hline
+			Classes des instructions&Nombre d’instructions&Pourcentage\\
+			\hline
+			load& 				26485327&	28.78\\
+			\hline
+			store& 				6383433&	6.94\\
+			\hline
+			uncond branch& 		5382775&	5.85\\
+			\hline
+			cond branch& 		9396219& 	10.21\\
+			\hline
+			int computation& 	44369706& 	48.22\\
+			\hline
+			fp computation&		0& 			0.00\\
+			\hline
+			trap& 				239& 		0.00\\
+			\hline
+			\end{tabular}
+			\end{table}
+		
+
+			\begin{table}[!htbp]
+			\centering
+			\begin{tabular}{|c|c|c|}
+			\hline
+			\multicolumn{3}{|c|}{bf.ss input\_small.asc}\\
+			\hline
+			Classes des instructions&Nombre d’instructions&Pourcentage\\
+			\hline
+			load& 				2623& 		8.12\\
+			\hline
+			store& 				3501& 		45.61\\
+			\hline
+			uncond branch& 		167&		2.18\\
+			\hline
+			cond branch& 		873&		11.37\\
+			\hline
+			int computation& 	2504&		32.62\\
+			\hline
+			fp computation&		0& 			8	0.100.00\\
+			\hline
+			trap& 				8&			0.10\\
+			\hline
+			\end{tabular}
+			\end{table}
+
+		\subsection{Q2}
+		
+
+		\subsection{Q3}
+		
+
+	
+	\newpage
+	\section{Evaluation des performances}
+	    \subsection{Q4}
+	    
+
+	    \subsection{Q5}
+	    	
+	
+	    
+	 \newpage
+	 \section{Efficacité surfacique} 
+	    \subsection{Q6}
+	   
+
+	    \subsection{Q7}
+	   
+
+ 		\subsection{Q8}
+
+
+ 		\subsection{Q9}
+		
+	  
+    \newpage
+	\section{Efficacité énergétique}
+		\subsection{Q10}
+
+
+		\subsection{Q11}
+
+
+	\newpage
+	\section{Architecture système big.LITTLE}
+		\subsection{Q12}
+
+
+	\newpage
+	\section{Faculatif}
+		\subsection{Q13}
+
+
+		\subsection{Q14}
+
+
+	    
+\end{document}
