@@ -1,0 +1,20 @@
+
+- récupérer le code source bloc cipher BlowFish
+  cp /home/g/gbusnot/ES201/tools/blowfish_modified.tar.gz <your_directory>
+
+- lancement d'une simu (bloc cipher BlowFish)
+  sim-outorder <options> bf.ss e input_small.asc output_small.enc 1234567890abcdeffedcba0987654321
+
+- compiler dijkstra
+  sslittle-na-sstrix-gcc dijkstra_small.c -o dijkstra_small.ss
+  sslittle-na-sstrix-gcc dijkstra_large.c -o dijkstra_large.ss
+
+- Q1
+  sim-profile -iclass dijkstra_small.ss input.dat
+ 
+- 
+
+
+
+
+
